@@ -268,13 +268,13 @@ module.exports = {
                     if (!('antiDownload' in chat)) chat.antiDownload = true
                     if (!('antispam' in chat)) chat.antispam = true
                     if (!('antitroli' in chat)) chat.antitroli = false
-                    if (!('antivirtex' in chat)) chat.antivirtex = false
+                    if (!('antivirtex' in chat)) chat.antivirtex = true
                     if (!('viewonce' in chat)) chat.viewonce = true
                     if (!('nsfw' in chat)) chat.nsfw = false
                     if (!('simi' in chat)) chat.simi = false
-                    if (!('clear' in chat)) chat.clear = false
-                    if (!isNumber(chat.cleartime)) chat.clearTime = 0 
-                    if (!('antitag' in chat)) chat.antitag = false
+                    if (!('clear' in chat)) chat.clear = true
+                    if (!isNumber(chat.cleartime)) chat.clearTime = 2
+                    if (!('antitag' in chat)) chat.antitag = true
                 } else global.db.data.chats[m.chat] = {
                     name: this.getName(m.chat),
                     closeGroup: false,
@@ -296,13 +296,13 @@ module.exports = {
                     antiDownload: true,
                     antispam: true,
                     antitroli: false,
-                    antivirtex: false,
+                    antivirtex: true,
                     viewonce: true,
                     nsfw: false,
                     simi: false,
-                    clear: false,
-                    clearTime: 0,
-                    antitag: false
+                    clear: true,
+                    clearTime: 2,
+                    antitag: true
                 }
                 let settings = global.db.data.settings[this.user.jid]
                 if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
@@ -633,10 +633,10 @@ module.exports = {
                                 member: groupMetadata.participants.length
                             })
                             /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fake,{
+   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'ArullBotz', fake,{
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: 'https://youtu.be/c-06tx4vusw',
+    mediaUrl: 'https://youtu.be/NmP2bAEOI9g',
     mediaType: 2,
     description: data.deslink , 
     title: run,
